@@ -1,5 +1,5 @@
-CPP_COMPILER = clang++-16
-CFLAGS = -g -Wall -fstandalone-debug
+CPP_COMPILER = g++
+CFLAGS = -g -Wall 
 CPP_VERSION=c++2b #clang 16 still uses c++2b to represent c++23
 ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ecpp --color -fCourier8
 VALGRIND_FLAGS=-v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all

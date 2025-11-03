@@ -157,7 +157,7 @@ Returned      void
 *******************************************************************************/
 void Card::setSuit (const std::string& rcSuit) {
   bool bIsIn = false;
-  for (int i = 0; i < SUITS.size (); i++) {
+  for (size_t i = 0; i < SUITS.size (); i++) {
     if (SUITS.at (i) == rcSuit) {
       bIsIn = true;
     }

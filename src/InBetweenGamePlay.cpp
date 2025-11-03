@@ -98,7 +98,7 @@ Returned      void
 *******************************************************************************/
 void InBetweenGamePlay::dealCards () {
   const int CARDS_DEALT = 2;
-  for (int i = 0; i < CARDS_DEALT; i++) {
+  for (size_t i = 0; i < CARDS_DEALT; i++) {
     for (auto& player : mcInBetweenPlayers) {
       player->addToInBetweenHand (mcDeck.dealCard ());
     }
@@ -170,7 +170,7 @@ void InBetweenGamePlay::playRound () {
 
     try {
       bet = player->getBet (mcPot.getBalance ());
-    } catch (std::runtime_error) {
+    } catch (const std::runtime_error&) {
       std::cout << "Invalid bet amount. You lose your turn and 1 chip" 
         << std::endl;
       player->subtractFromBank(MISINPUT_PUNISHMENT);

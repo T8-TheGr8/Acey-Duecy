@@ -28,8 +28,8 @@ Deck::Deck () {
     {8, "8"}, {9, "9"}, {10, "A"}, {11, "J"}, {12, "K"}, {13, "Q"}
   };
 
-  for (int suit = 0; suit < Card::SUITS.size (); suit++) {
-    for (int denom = 1; denom <= Card::DENOMINATION_VALUES.size (); denom++) {
+  for (size_t suit = 0; suit < Card::SUITS.size (); suit++) {
+    for (size_t denom = 1; denom <= Card::DENOMINATION_VALUES.size (); denom++) {
       Card cCard (Card::SUITS.at (suit), NUM_TO_DENOM.at (denom));
       addCard (cCard);
     }
@@ -47,7 +47,7 @@ Parameter:    rcDeck - the deck being copied
 Returned      n/a
 *******************************************************************************/
 Deck::Deck (const Deck& rcDeck) {
-  for (int i = 0; i < rcDeck.size (); i++) {
+  for (size_t i = 0; i < rcDeck.size (); i++) {
     addCard (rcDeck.mcCards.at (i));
   }
 }
@@ -157,7 +157,7 @@ Returned      rcOutStream - the output stream
 *******************************************************************************/
 std::ostream& operator<< (std::ostream& rcOutStream, const Deck& rcDeck) {
   bool bFirst = true;
-  for (int i = 0; i < rcDeck.size (); i++) {
+  for (size_t i = 0; i < rcDeck.size (); i++) {
     if (bFirst) {
       bFirst = false;
     }
