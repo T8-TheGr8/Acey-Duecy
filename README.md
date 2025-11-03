@@ -1,4 +1,38 @@
-## 250 C++ Template
+# Acey-Ducey (In-Between) Card Game – C++
+
+A command-line implementation of **Acey-Ducey (also called In-Between)** written in modern C++ (C++23).  
+This project was created to practice object-oriented design, class hierarchies, polymorphism, and game logic.
+
+## 🚀 Features
+
+- Full gameplay loop: place bets, draw cards, win/lose based on in-between logic  
+- Card, Deck, Hand classes using proper encapsulation and abstraction  
+- Shuffling, copying decks, and re-dealing functionality  
+- Input validation and error handling using `try/catch` and exceptions  
+- Modular code structure across multiple `.cpp` and `.h` files
+- Unit tests and memory leak protection via valgrind 
+
+## Build and run the game 
+
+Terminal Commands: 
+1. make
+2. bin/main.exe
+
+## How to Play 
+
+1. You begin with a starting balance.
+2. Two cards are dealt face up.
+3. You place a bet whether the next card will fall between the first two.
+4. If correct, you win the bet.
+5. If incorrect or identical, you lose the bet.
+
+Game continues until you quit or run out of money.
+
+
+
+--- 
+# Class project README  
+## CS250 C++ Template
 
 ## Commands
 
@@ -16,20 +50,7 @@
       ```
     * Type bin/main.exe
 
-2. Debug
-
-    * Set a break point in your program
-    * In the VS Code Activity Bar, select the Debug option (triangle)
-    * Select the RUN AND DEBUG lldb - debug option
-
-3. Print PDF
-
-    * Open task bar with Ctrl+P
-    * Type <b>task</b> in the task bar followed by a space
-    * Select printToPDF
-    * The pdf will be created in the pdfs directory
-
-4. Create and run GoogleTest
+2. Create and run GoogleTest
 
     * You will be asked to select a Kit. Select the Kit that says **unspecified**. Further, this only needs to be done once. Once you select the Kit, you will see an attempt to build the unit tests which will fail because the GoogleTest test suite is not installed yet. Proceed to the next bullet point.
 
